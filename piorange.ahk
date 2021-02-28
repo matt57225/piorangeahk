@@ -43,7 +43,7 @@ Loop, Files, ranges\*.txt, R
     Sleep 500
     NewRange := clipboard
     ;MsgBox, %NewRange%
-    FilePath := StrReplace(A_LoopFileDir, "ranges", OutputDirName) "\" A_LoopFileName
+    FilePath := StrReplace(A_LoopFileDir, "ranges", OutputDirName,,1) "\" A_LoopFileName
     FileDelete, %FilePath%
     FileAppend, %NewRange%, %FilePath%
 }
